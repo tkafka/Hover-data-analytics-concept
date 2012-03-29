@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <title>ACME corp. data analytics</title>
+
+    <meta name="description" content="">
+    <meta name="author" content="tomaskafka.com">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link rel="stylesheet/less" href="res/css/twitter-bootstrap-70b1a6b/lib/bootstrap.less">
+    <link rel="stylesheet/less" href="res/css/style.less">
+    <script src="res/js/less-1.1.3.min.js"></script>
+
+
+    <!-- processing -->
+    <script src="res/js/underscore-1.2.0.js"></script>
+    <script src="res/js/jquery-1.6.4.js"></script>
+    <script src="res/js/processing-js-1.3.6/processing-1.3.6.js"></script>
+
+    <!-- Scripts -->
+    <script src="res/js/script.js"></script>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+</head>
+<body>
+<!--
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="#">Project name</a>
+          <ul class="nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <form action="" class="pull-right">
+            <input class="input-small" type="text" placeholder="Username">
+            <input class="input-small" type="password" placeholder="Password">
+            <button class="btn" type="submit">Sign in</button>
+          </form>
+        </div>
+      </div>
+    </div>
+-->
+
+<div class="container">
+    <div class="content">
+        <div class="page-header row">
+            <div class="span-one-third">
+                <h1>ACME corp.
+                    <small>Annual report</small>
+                </h1>
+            </div>
+            <div class="span-two-thirds">
+                <p class="menu">
+                    <a href="" class="active">Dashboards</a>
+                    <a href="">Reports</a>
+                    <a href="">Manage</a>
+                    <a href="">Tomáš Kafka <small>▼</small></a>
+                </p>
+            </div>
+        </div>
+        <div id="dashboard">
+            <ul class="tabs">
+                <li class="active"><a href="">Profits</a></li>
+                <li><a href="">Sales</a></li>
+                <li><a href="">Marketing</a></li>
+                <li><a href="">Engineering</a></li>
+                <li><a href="">Maintenance</a></li>
+                <li><a href="">Assets</a></li>
+            </ul>
+            <div class="canvas">
+                <div class="paper" style="height: 800px;">
+                    <div class="widget" style="width: 600px; height: 50px; top: 0px; left: 0px;">
+                        <h3>Revenues</h3>
+                    </div>
+                    <canvas class="widget" id="chart1"
+                            style="width: 620px; height: 300px; top: 40px; left: -20px;"></canvas>
+                    <div class="widget" style="width: 600px; height: 50px; top: 360px; left: 0px;">
+                        <h3>Profits</h3>
+                    </div>
+                    <canvas class="widget" id="chart2"
+                            style="width: 620px; height: 300px; top: 400px; left: -20px;"></canvas>
+                    <canvas class="widget" id="clock"
+                            style="width: 100px; height: 100px; top: 330px; left: 0px;"></canvas>
+                    <!--<canvas class="widget" data-processing-sources="res/pde/example.pde" style="width: 600px; height: 300px; top: 330px; left: 0px;"></canvas>-->
+                    <div class="widget number"
+                         style="width: 240px; height: 300px; top: 60px; left: 630px;">
+                        <h1><span class="up">&uarr;</span> $ 352.786.845
+                            <small>Annual revenue</small>
+                        </h1>
+                    </div>
+                    <div class="widget number"
+                         style="width: 240px; height: 300px; top: 160px; left: 630px;">
+                        <h1><span class="up">&uarr;</span> $ 78.043.281
+                            <small>Annual profits</small>
+                        </h1>
+                    </div>
+                    <div class="widget number"
+                         style="width: 240px; height: 300px; top: 260px; left: 630px;">
+                        <h1><span class="up">&uarr;</span> $ 53.458.939
+                            <small>After tax profits</small>
+                        </h1>
+                    </div>
+                    <div class="widget"
+                         style="width: 240px; height: 300px; top: 400px; left: 630px;">
+                        <h3>Concept:</h3>
+
+                        <p>
+                            The same thing Apple does &mdash; physically driven interactions.
+                        </p>
+
+                        <p>
+                            There are no time based animations, everything is driven by mouse
+                            position,
+                            so that user feels much more in control. For example, notice how axes
+                            appear,
+                            hover bubbles change color, and selected line strenghtens,
+                            as you move the mouse more into chart's frame.
+                        </p>
+
+                        <p>
+                            <em>This effect is subtle but important.</em>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="row">
+        <div class="span-one-third">
+            <a href="mailto:tomas.kafka@gooddata.com">tomas.kafka@gooddata.com</a>
+        </div>
+        <div class="span-two-thirds">
+            Made with <a href="http://processingjs.org/">processing.js</a>,
+            <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>,
+            <a href="http://lesscss.org/">{less}</a> and
+            <a href="http://documentcloud.github.com/underscore/">underscore.js</a>.
+        </div>
+    </footer>
+
+</div>
+<!-- /container -->
+
+
+</body>
+</html>
